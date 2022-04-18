@@ -23,6 +23,6 @@ jobs:
       uses: actions/upload-artifact@v3.0.0
       with:
         name: gambatte_libretro.so# optional, default is artifact
-        path: /root/workspace/gambatte_libretro.so
+        path: gambatte_libretro.so
         if-no-files-found: error # optional, default is warn
         retention-days: 30 # optional
