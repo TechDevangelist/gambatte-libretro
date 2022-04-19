@@ -14,7 +14,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/root/workspace \
-        techdevangelist/miyoomini-buildroot:latest /bin/bash -c "cd /root/workspace && fail && echo -n \"Resulting file: \" && ls -lah gambatte_libretro.so && sha1sum gambatte_libretro.so > gambatte_libretro.so.sha1 && sha256sum gambatte_libretro.so > gambatte_libretro.so.sha256"
+        techdevangelist/miyoomini-buildroot:latest /bin/bash -c "cd /root/workspace && echo "none" && echo -n \"Resulting file: \" && ls -lah gambatte_libretro.so && sha1sum gambatte_libretro.so > gambatte_libretro.so.sha1 && sha256sum gambatte_libretro.so > gambatte_libretro.so.sha256"
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
