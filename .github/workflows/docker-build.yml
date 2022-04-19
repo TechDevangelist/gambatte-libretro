@@ -1,4 +1,4 @@
-name: Build armhf code via Docker image
+name: Build via Docker image
 
 on:
   workflow_dispatch:
