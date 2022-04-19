@@ -1,4 +1,4 @@
-name: Build armhf code via techdevangelist/miyoomini-buildroot Docker image
+name: Build armhf code via Docker image
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/root/workspace \
-        techdevangelist/miyoomini-buildroot:latest /bin/bash -c "cd /root/workspace && make -f Makefile.libretro platform=classic_armv7_a7 && ls -lah *.so"
+        techdevangelist/miyoomini-buildroot:latest /bin/bash -c "cd /root/workspace && make -f Makefile.libretro platform=classic_armv7_a7 && ls -lah *.so && sha1sum *.so && sha256sum *.so"
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
