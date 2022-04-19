@@ -1,10 +1,7 @@
-name: Build armhf code
+name: Build armhf code via techdevangelist/miyoomini-buildroot Docker image
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
